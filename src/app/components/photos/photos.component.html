@@ -1,0 +1,10 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let image of images | async">
+    <img [src]="image.url" class="card-img-top" [alt]="image.name">
+    <div class="card-body">
+      <h5 class="card-title">{{ image.name }}</h5>
+      <hr>
+      <p class="card-text text-right"><span class="badge badge-dark">{{ image.date.toDate() | date: 'dd/MM/yyyy' }}</span></p>
+    </div>
+  </div>
+ </div>
